@@ -1,11 +1,18 @@
 # Setup vim
-vim configuration
+
+Run in Shell:
+```
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
 
+# Install ripgrep
+
+```
 brew install ripgrep
+```
 
-Put in .bashrc / .zshrc
+# Update your .bashrc / .zshrc
 ```
 # --files: List files that would be searched but do not search
 # --no-ignore: Do not respect .gitignore, etc...
