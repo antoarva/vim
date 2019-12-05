@@ -33,6 +33,7 @@ Plug 'easymotion/vim-easymotion'
 " initialize plugin system
 call plug#end()
 
+set clipboard^=unnamed
 set incsearch
 set hlsearch
 let g:airline#extensions#tabline#enabled = 1
