@@ -6,13 +6,13 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-# Install ripgrep
+## Install ripgrep
 
 ```
 brew install ripgrep
 ```
 
-# Update your .bashrc / .zshrc
+## Update your .bashrc / .zshrc
 ```
 # --files: List files that would be searched but do not search
 # --no-ignore: Do not respect .gitignore, etc...
