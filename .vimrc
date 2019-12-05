@@ -5,7 +5,9 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-
+" Plug 'NLKNguyen/papercolor-theme'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf.vim'
 " PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run the install script
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -31,6 +33,11 @@ Plug 'easymotion/vim-easymotion'
 " initialize plugin system
 call plug#end()
 
+set incsearch
+set hlsearch
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+set ignorecase
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 
 " Jump to anywhere you want with minimal keystrokes, with just one key binding.
@@ -60,7 +67,8 @@ let g:ale_fix_on_save = 1
 
 
 " nerdtree configuration
-autocmd vimenter * NERDTree
+" if you want to open nerdtree always on open enable the following line
+"autocmd vimenter * NERDTree
 nnoremap <C-P> :Rg<Cr>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
