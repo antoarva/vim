@@ -8,6 +8,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 ## Install ripgrep
 
+For Mac os:
 ```
 brew install ripgrep
 ```
