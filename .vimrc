@@ -35,6 +35,8 @@ Plug 'scrooloose/nerdcommenter'
 call plug#end()
 
 " general vim configuration
+nnoremap H gT
+nnoremap L gt
 set clipboard^=unnamed
 set incsearch
 set hlsearch
