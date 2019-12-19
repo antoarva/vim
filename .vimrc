@@ -30,6 +30,7 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 Plug 'easymotion/vim-easymotion'
 
+Plug 'scrooloose/nerdcommenter'
 " initialize plugin system
 call plug#end()
 
@@ -40,16 +41,9 @@ set hlsearch
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 set ignorecase
+filetype plugin on
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 map tt :term<CR>
-" save and quit shortcuts
-nnoremap <c-w> :q<CR> # normal mode: save
-inoremap <c-w> <Esc>:q<CR>l # insert mode: escape to normal and save
-vnoremap <c-w> <Esc>:q<CR> # visual mode: escape to normal and save
-
-nnoremap <c-s> :w<CR> # normal mode: save
-inoremap <c-s> <Esc>:w<CR>l # insert mode: escape to normal and save
-vnoremap <c-s> <Esc>:w<CR> # visual mode: escape to normal and save
 
 " Jump to anywhere you want with minimal keystrokes, with just one key binding.
 " `s{char}{label}`
