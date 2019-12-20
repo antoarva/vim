@@ -1,7 +1,3 @@
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
-export FZF_DEFAULT_OPTS='--preview "head -100 {}"'
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 #use vim in zsh
 bindkey -v
 function zle-line-init zle-keymap-select {
@@ -13,3 +9,7 @@ function zle-line-init zle-keymap-select {
 zle -N zle-line-init
 zle -N zle-keymap-select
 export KEYTIMEOUT=1
+
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+export FZF_DEFAULT_OPTS='--preview "head -100 {}"'
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
