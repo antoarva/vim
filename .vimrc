@@ -31,6 +31,8 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'easymotion/vim-easymotion'
 
 Plug 'scrooloose/nerdcommenter'
+
+Plug 'tpope/vim-surround'
 " initialize plugin system
 call plug#end()
 
