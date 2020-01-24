@@ -33,6 +33,13 @@ Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdcommenter'
 
 Plug 'tpope/vim-surround'
+
+" dart plugins
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'natebosch/vim-lsc'
+Plug 'natebosch/vim-lsc-dart'
+
+
 " initialize plugin system
 call plug#end()
 
@@ -48,6 +55,11 @@ set ignorecase
 filetype plugin on
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 map tt :term<CR>
+
+" flutter configuration
+let dart_html_in_string=v:true
+let g:dart_style_guide = 2
+let g:dart_format_on_save = 1
 
 " Jump to anywhere you want with minimal keystrokes, with just one key binding.
 " `s{char}{label}`
