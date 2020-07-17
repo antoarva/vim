@@ -20,6 +20,8 @@ Plug 'scrooloose/nerdtree'
 
 Plug 'tpope/vim-fugitive'
 
+Plug 'tpope/vim-eunuch'
+
 Plug 'jiangmiao/auto-pairs'
 
 Plug 'ryanoasis/vim-devicons'
@@ -39,6 +41,9 @@ Plug 'dart-lang/dart-vim-plugin'
 Plug 'natebosch/vim-lsc'
 Plug 'natebosch/vim-lsc-dart'
 
+" tmux plugins
+Plug 'christoomey/vim-tmux-navigator'
+
 
 " initialize plugin system
 call plug#end()
@@ -51,10 +56,22 @@ set incsearch
 set hlsearch
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+set t_Co=256
+let g:airline_theme='papercolor'
 set ignorecase
 filetype plugin on
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 map tt :term<CR>
+
+" vim shortcuts
+" Console log from insert mode; Puts focus inside parentheses
+imap cll console.log();<Esc>==f(a
+" " Console log from visual mode on next line, puts visual selection inside
+" parentheses
+vmap cll yocll<Esc>p
+" " Console log from normal mode, inserted on next line with word your on
+" inside parentheses
+nmap cll yiwocll<Esc>p )
 
 " flutter configuration
 let dart_html_in_string=v:true
@@ -76,11 +93,11 @@ let g:EasyMotion_smartcase = 1
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
-"eslint configuration
+"eslint configuration 
 let g:ale_fixers = {
  \ 'javascript': ['eslint']
  \ }
-
+ 
 let g:ale_sign_error = '❌'
 let g:ale_sign_warning = '⚠️'
 
