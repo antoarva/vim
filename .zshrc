@@ -43,3 +43,20 @@ precmd() {
         PROMPT='%F{green}%n%F{orange}@%F{yellow}%m:%F{7}%3~%f %# '
     fi
 }
+
+# alias
+alias ll='ls -lG'
+alias v='nvim'
+alias k='kubectl'
+alias kx='f() f[ "$1" ] && kubectl config use-context $1 || kubectl config current-context ; } ; f'
+alias kn='f() ([ "$1" 1 && kubectl config set-context --current --namespace $l || kubectl config view --minify | grep namespace | cut -d" " -f6 ; } ; f'
+alias r='cd "$(git rev-parse --show-toplevel)"'
+alias b='cd -'
+alias gic='git checkout'
+alias gil='git pull'
+alias gih='git push'
+alias gis='git status'
+alias gim='git. commit -m'
+alias gif='git diff'
+alias cl='clear'
+alias o='opencode'
